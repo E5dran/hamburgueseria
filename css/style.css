@@ -253,7 +253,7 @@ main section .grid article {
     padding: 1.5em 0;
 }
 
-main section article>div .fa-solid {
+main section .grid article>div .fa-solid {
     border: 1px solid var(--colorprincipal);
     border-radius: 0.404em;
     padding: 0.75em;
@@ -289,6 +289,40 @@ main section article p {
 }
 
 /* final ourservices */
+
+/* inicio Aboutus */
+
+main section .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+main section article h4 {
+    color: var(--colorprincipal);
+    padding-bottom: 0.625em;
+}
+
+main section .flex .imagen {
+    width: 95%;
+    margin: 2.5em auto;
+}
+
+main section .flex .imagen .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main section .flex .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main section .flex .imagen:hover :is(.marco, .marco img) {
+    transform: rotateZ(0deg);
+}
+
+/* fin Aboutus */
 
 /* inicio footer */
 
@@ -357,6 +391,13 @@ footer a:hover {
         width: 33.333%;
     }
 
+    main section .flex {
+        flex-direction: row;
+    }
+
+    main section .flex .imagen {
+        margin: 1em 2.5em;
+    }
 }
 
 /*media query a desktop*/
