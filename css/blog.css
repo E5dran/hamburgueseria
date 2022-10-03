@@ -133,98 +133,25 @@ header .nav_top a:hover .fa-user {
 
 /* fin header */
 
-/* inicio hero */
+/* inicio blog */
 
-.hero {
-    background-image: url('../images/fondo.jpg');
-    height: 60vh;
-    background-size: cover;
-    background-position: center center;
-    /*  oscurecer el background-img poniendo un color y blendeandolo con la imagen*/
-    background-color: #888;
-    background-blend-mode: multiply;
-    color: white;
-
-    display: flex;
-}
-
-.hero .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 90%;
-}
-
-.hero h1 {
-    font-family: var(--fuentetitulos);
-    font-size: 2em;
-}
-
-.hero h2 {
-    color: var(--colorprincipal);
-    font-size: 1.250em;
-    margin: var(--margingrid) 0;
-}
-
-.hero p {
-    font-size: 1.150em;
-}
-
-.boton {
-    display: inline-block;
-    background-color: var(--colorprincipal);
-    text-decoration: none;
-    color: white;
-
-    border-radius: 0.404em;
-    padding: 1.150em;
-    margin: var(--margingrid) 0;
-
-    border: 1px solid var(--colorprincipal);
-}
-
-.boton:hover {
-    background-color: transparent;
-    color: var(--colorprincipal);
-}
-
-.boton:hover i {
-    transition: transform 0.5s;
-    transform: translateX(6px) scale(1.10);
-}
-
-.hero ul {
-    display: flex;
-    width: 10em;
-    justify-content: space-between;
-}
-
-.hero ul a {
-    color: white;
-    text-decoration: none;
-    font-size: 2em;
-}
-
-/* fin hero */
-
-/* inicio ourservices */
-
-main section {
+main .ourblogs {
     padding: 2.125em 1.5em;
 }
 
-main section h2 {
+.ourblogs .container h1 {
     color: black;
     font-family: var(--fuentetitulos);
     font-size: 2em;
     text-align: center;
 }
 
-main section h2 span {
+.ourblogs .container h1 span {
     color: var(--colorprincipal);
+    font-weight: 700;
 }
 
-main section .underline {
+main .ourblogs .underline {
     position: relative;
     width: 6.250em;
     margin: 0 auto;
@@ -233,38 +160,40 @@ main section .underline {
     text-align: center;
 }
 
-main section .underline span {
+main .ourblogs .underline span {
     position: absolute;
     transform: translate(-50%, -100%);
 }
 
-main section .underline hr {
+main .ourblogs .underline hr {
     border-color: var(--colorprincipal);
 }
 
-main section .grid {
+main .ourblogs .grid {
     display: flex;
     flex-wrap: wrap;
 }
 
-main section .grid article {
+main .ourblogs .grid article {
+    width: 50%;
+    padding: 1.5em;
+}
+
+main .ourblogs .grid article:last-child {
     width: 100%;
-    border-bottom: 1px solid #aaa;
-    padding: 1.5em 0;
+    padding: 1.5em;
 }
 
-main section .grid article>div .fa-solid {
-    border: 1px solid var(--colorprincipal);
-    border-radius: 0.404em;
-    padding: 0.75em;
-    color: var(--colorprincipal);
-    font-size: 130%;
-}
-
-main section article h3 {
+main .ourblogs article h3 {
     font-weight: 700;
     font-size: 110%;
     padding: 0.625em 0;
+}
+
+main .ourblogs article h4 {
+    color: var(--colorprincipal);
+    font-weight: 700;
+    padding-bottom: 0.625em;
 }
 
 main p {
@@ -274,7 +203,7 @@ main p {
     font-size: 95%;
 }
 
-main section article p {
+main .ourblogs article p {
     margin-bottom: 0.5em;
 }
 
@@ -284,46 +213,47 @@ main section article p {
     color: var(--colorprincipal);
 }
 
-.fa-truck {
-    transform: rotateY(180deg);
+main .ourblogs figure {
+    position: relative;
+    text-align: center;
 }
 
-/* final ourservices */
+main .ourblogs figure .cuadrado {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--colorprincipal);
 
-/* inicio Aboutus */
-
-main section .flex {
-    display: flex;
-    flex-direction: column;
+    width: 75px;
+    height: 75px;
+    opacity: 0.75;
 }
 
-main section article h4 {
+main .ourblogs figure .fecha {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    width: 40px;
+
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+
+/*_________original__________*/
+
+main section .grid article>div .fa-solid {
+    border: 1px solid var(--colorprincipal);
+    border-radius: 0.404em;
+    padding: 0.75em;
     color: var(--colorprincipal);
-    padding-bottom: 0.625em;
+    font-size: 130%;
 }
 
-main section .flex .imagen {
-    width: 95%;
-    margin: 2.5em auto;
-}
-
-main section .flex .imagen .marco {
-    border: 3px solid var(--colorprincipal);
-    transform: rotateZ(10deg);
-    transition: 1s;
-}
-
-main section .flex .imagen .marco img {
-    transform: rotateZ(-10deg);
-    transition: 1s;
-}
-
-main section .flex .imagen:hover :is(.marco, .marco img) {
-    transform: rotateZ(0deg);
-}
-
-/* fin Aboutus */
-
+/* fin blog */
 
 /* inicio footer */
 
@@ -418,6 +348,10 @@ footer a:hover {
         padding: 0 1.25em;
         border-bottom: none;
         padding-top: 0.5em;
+    }
+
+    main .ourblogs .grid :is(article, article:last-child) {
+        width: 33.333%;
     }
 
     header nav .container .menu li {
